@@ -1,0 +1,15 @@
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.transition-300ms {
+  transition: 300ms ease;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

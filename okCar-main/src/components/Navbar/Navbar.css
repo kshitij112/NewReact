@@ -1,0 +1,11 @@
+.Navbar {
+  @media screen and (max-width: 1000px) {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.avtar{
+   height: 2px;
+}
+

@@ -1,0 +1,40 @@
+{
+    "dealerdetails" :[
+        {
+            "DealerID":"DH667",
+            "DealerName":"Hardik Pande",
+            "TotalCars":"3",
+            "CarBrand":"Hyundai",
+            "Model":"Venue",
+            "BodyType":"SUV",
+            "CarId":"HP01",
+            "Location":"Baner",
+            "KmDriven":"64568km",
+            "Year":"2016"
+        },
+        {
+            "DealerID":"DH667",
+            "DealerName":"Hardik Pande",
+            "TotalCars":"4",
+            "CarBrand":"Tata",
+            "Model":"nano",
+            "BodyType":"mini",
+            "CarId":"HP02",
+            "Location":"Kothrud",
+            "KmDriven":"65555km",
+            "Year":"2017"
+        },
+        {
+            "DealerID":"DH667",
+            "DealerName":"Hardik Pande",
+            "TotalCars":"4",
+            "CarBrand":"Maruti Suzoki",
+            "Model":"Swift",
+            "BodyType":"Sedan",
+            "CarId":"HP03",
+            "Location":"Hadapsar",
+            "KmDriven":"6321km",
+            "Year":"2018"
+        }
+    ]
+}

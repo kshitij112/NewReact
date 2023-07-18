@@ -1,0 +1,11 @@
+.tableContainer {
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
+}
+
+.cardContainer {
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
+}
