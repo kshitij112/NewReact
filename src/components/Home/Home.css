@@ -1,34 +1,3 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  translate: 0 -72px;
-  width: 100%;
-  height: 72px;
-  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
-  transition: 0.5s;
-  z-index: 1000;
-}
-
-.visible {
-  top: 0;
-  translate: 0;
-}
-
-@media (max-width: 767px) {
-  .howlist {
-    flex-wrap: wrap;
-  }
-
-  .howlist li {
-    flex: 1 0 100%; /* Take full width on smaller screens */
-    margin-bottom: 10px;
-  }
-
-  .howlist li img {
-    max-width: 100%; /* Take full width on smaller screens */
-  }
-}
 
 .makelist {
   display: flex;
@@ -58,5 +27,39 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .makelist li {
     flex: 0 0 calc(33.33% - 20px); /* Set each logo to take 33.33% of the screen width minus the gap space on tablets */
+  }
+}
+
+/* original CSS code */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-72px);
+  width: 100%;
+  height: 72px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.visible {
+  top: 0;
+  transform: translateY(0);
+}
+
+/* Media query fr small scr */
+@media (max-width: 767px) {
+  .howlist {
+    flex-wrap: wrap;
+  }
+
+  .howlist li {
+    flex: 1 0 100%;
+    margin-bottom: 10px;
+  }
+
+  .howlist li img {
+    max-width: 100%;
   }
 }
