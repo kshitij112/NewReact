@@ -1,0 +1,44 @@
+{
+    "userRequest":[
+        {
+            "userName" :"Diptesh Jain",
+            "requestID":"R2554",
+            "DealerID":"D1234",
+            "Location":"Baner",
+            "CarID":"SUV1028",
+            "DealStatus":"Done"
+        },
+        {
+            "userName" :"Shubham Shende",
+            "requestID":"R2554",
+            "DealerID":"D1234",
+            "Location":"Baner",
+            "CarID":"SUV1028",
+            "DealStatus":"Done"
+        },
+        {
+            "userName" :"Chacha Chaudhary",
+            "requestID":"R2554",
+            "DealerID":"D1234",
+            "Location":"Baner",
+            "CarID":"SUV1028",
+            "DealStatus":"Done"
+        },
+        {
+            "userName" :"Anand Deshpande",
+            "requestID":"R2554",
+            "DealerID":"D1234",
+            "Location":"Baner",
+            "CarID":"SUV1028",
+            "DealStatus":"Done"
+        },
+        {
+            "userName" :"Amit Mishra",
+            "requestID":"R2554",
+            "DealerID":"D1234",
+            "Location":"Baner",
+            "CarID":"SUV1028",
+            "DealStatus":"Done"
+        }
+    ]
+}

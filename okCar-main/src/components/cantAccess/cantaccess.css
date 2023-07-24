@@ -1,0 +1,11 @@
+.cantaccess{
+    width: auto;
+    height: 75vh;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+

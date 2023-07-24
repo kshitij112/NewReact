@@ -1,0 +1,65 @@
+
+.makelist {
+  display: flex;
+  gap: 10px; /* Redu the gap between logos*/
+  justify-content: center;
+}
+
+.makelist li {
+  flex: 0 0 calc(25% - 20px); /* log take 25% of the screen width minus the gap space */
+  max-width: 150px; /* Limit the maximum width f logo */
+}
+
+/*  mobile view =*/
+@media screen and (max-width: 768px) {
+  .makelist {
+    flex-direction: column; /* Logo single column */
+    align-items: center; /* cent logo hori */
+  }
+
+  .makelist li {
+    flex: 0 0 100%; /* take full width in a single column */
+    margin-bottom: 10px; /* some spacing  */
+  }
+}
+
+/*  tablet view */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .makelist li {
+    flex: 0 0 calc(33.33% - 20px); /* Set each logo to take 33.33% of the screen width minus the gap space on tablets */
+  }
+}
+
+/* original CSS code */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateY(-72px);
+  width: 100%;
+  height: 72px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 10%);
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.visible {
+  top: 0;
+  transform: translateY(0);
+}
+
+/* Media query fr small scr */
+@media (max-width: 767px) {
+  .howlist {
+    flex-wrap: wrap;
+  }
+
+  .howlist li {
+    flex: 1 0 100%;
+    margin-bottom: 10px;
+  }
+
+  .howlist li img {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "dealersManegment": [
+    {
+      "dealersManegment":"dealersManegment",
+      "DealerID": "12",
+      "DealerName": "xyz",
+      "Location": "Kharadi",
+      "ContactNo": "1234567890",
+      "TotalCars": "20",
+      "Edit": "1"
+    },
+    {
+      "DealerID": "18",
+      "DealerName": "xyz",
+      "Location": "Kharadi",
+      "ContactNo": "1234567890",
+      "TotalCars": "12",
+      "Edit": "2"
+    },
+    {
+      "DealerID": "10",
+      "DealerName": "xyz",
+      "Location": "Kharadi",
+      "ContactNo": "1234567890",
+      "TotalCars": "12",
+      "Edit": "3"
+    },
+    {
+      "DealerID": "15",
+      "DealerName": "xyz",
+      "Location": "Kharadi",
+      "ContactNo": "1234567890",
+      "TotalCars": "12",
+      "Edit": "4"
+    },
+    {
+      "DealerID": "20",
+      "DealerName": "xyz",
+      "Location": "Kharadi",
+      "ContactNo": "1234567890",
+      "TotalCars": "12",
+      "Edit": "5"
+    }
+  
+  ]
+}
