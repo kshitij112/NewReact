@@ -1,4 +1,6 @@
 import AvtarModal from "../Navbar/AvtarModal";
+
+
 import HomeCarousel from "../carousel/HomeCarousel";
 import { Link } from "react-router-dom";
 import bghome from "../../../images/slider/Welcome Image.png";
@@ -23,24 +25,32 @@ const Home = () => {
   const lastScrollTop = useRef(0);
 
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [showMoreLogos, setShowMoreLogos] = useState(false);
 
   useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      () => {
-        var pageYOffset = window.scrollY;
-        if (pageYOffset > lastScrollTop.current) {
-          // downward scroll
-          setIsNavbarVisible(false);
-        } else if (pageYOffset < lastScrollTop.current) {
-          // upward scroll
-          setIsNavbarVisible(true);
-        } // else was horizontal scroll
-        lastScrollTop.current = pageYOffset <= 0 ? 0 : pageYOffset;
-      },
-      { passive: true }
-    );
-  }, []);
+    window.addEventListener("scroll", () => {
+      var pageYOffset = window.scrollY;
+      if (pageYOffset > lastScrollTop.current) {
+        // downward scroll
+        setIsNavbarVisible(false);
+      } else if (pageYOffset < lastScrollTop.current) {
+        // upward scroll
+        setIsNavbarVisible(true);
+      }
+      // else was horizontal scroll - If needed, you can handle horizontal scrolling here.
+      lastScrollTop.current = pageYOffset <= 0 ? 0 : pageYOffset;
+    }, { passive: true });
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []); // Don't forget to add the dependency array here if you have any dependencies
+
+  const toggleLogosVisibility = () => {
+    setShowMoreLogos((prevState) => !prevState);
+  };
+
 
   return (
     <div>
@@ -275,36 +285,10 @@ const Home = () => {
                 // border: "2px solid black",
               }}
             >
-              <li
-                className="col-md-2 col-sm-3 col-xs-6 "
-                style={{ cursor: "pointer" }}
-              >
-                <img
-                  className="transition-300ms"
-                  src="../../../images/logo/new car logos/Tata Motor Logo.png"
-                  alt=""
-                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
-                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
-                />
-                <strong>Tata Motors</strong>
-              </li>
-              <li
-                className="col-md-2 col-sm-3 col-xs-6 "
-                style={{ cursor: "pointer", flexDirection: "column" }}
-              >
-                <img
-                  className="transition-300ms"
-                  src="../../../images/logo/new car logos/suzuki logo.png"
-                  alt=""
-                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
-                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
-                />
-                <strong>Maruti Suzuki</strong>
-              </li>
-              <li
-                className="col-md-2 col-sm-3 col-xs-6 "
-                style={{ cursor: "pointer" }}
-              >
+
+
+            {/* Existing logos */}
+            <li className="col-md-2 col-sm-3 col-xs-6" style={{ cursor: "pointer" }}>
                 <img
                   className="transition-300ms"
                   src="../../../images/logo/new car logos/Hyundai Logo.png"
@@ -314,45 +298,286 @@ const Home = () => {
                 />
                 <strong>Hyundai</strong>
               </li>
+              <li className="col-md-2 col-sm-3 col-xs-6" style={{ cursor: "pointer" }}>
+                <img
+                  className="transition-300ms"
+                  src="../../../images/logo/new car logos/icons8-audi-500.png"
+                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
+                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
+                  alt=""
+                />
+                <strong>Audi</strong>
+              </li>
+              <li className="col-md-2 col-sm-3 col-xs-6" style={{ cursor: "pointer" }}>
+                <img
+                  className="transition-300ms"
+                  src="../../../images/logo/new car logos/icons8-mazda-480.png"
+                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
+                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
+                  alt=""
+                />
+                <strong>Mazda</strong>
+              </li>
+              <li className="col-md-2 col-sm-3 col-xs-6" style={{ cursor: "pointer" }}>
+                <img
+                  className="transition-300ms"
+                  src="../../../images/logo/new car logos/icons8-mercedes-benz-400.png"
+                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
+                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
+                  alt=""
+                />
+                <strong>Mercedes</strong>
+              </li>
+
+              
               <li
                 className="col-md-2 col-sm-3 col-xs-6 "
                 style={{ cursor: "pointer" }}
               >
                 <img
                   className="transition-300ms"
-                  src="../../../images/logo/new car logos/Mahindra Logo.png"
-                  alt=""
+                  src="../../../images/logo/new car logos/icons8-bmw-500.png"
                   onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
                   onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
+                  alt=""
                 />
-                <strong>Mahindra</strong>
+                <strong>BMW</strong>
               </li>
+
+
+
+
+
               <li
                 className="col-md-2 col-sm-3 col-xs-6 "
                 style={{ cursor: "pointer" }}
               >
                 <img
                   className="transition-300ms"
-                  src="../../../images/logo/new car logos/Honda Logo.png"
-                  alt=""
+                  src="../../../images/logo/new car logos/icons8-volvo-500.png"
                   onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
                   onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
-                />
-                <strong>Honda</strong>
-              </li>
-              <li
-                className="col-md-2 col-sm-3 col-xs-6 "
-                style={{ cursor: "pointer" }}
-              >
-                <img
-                  className="transition-300ms"
-                  src="../../../images/logo/toyota.png"
                   alt=""
-                  onMouseOver={(e) => (e.target.style.transform = "scale(1.1)")}
-                  onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
                 />
-                <strong>Toyota</strong>
+                <strong>Volvo</strong>
               </li>
+
+
+
+              
+              {/* Center slide-down */}
+              <li className="col-md-2 col-sm-3 col-xs-6" style={{ cursor: "pointer" }}>
+                <div
+                  onClick={toggleLogosVisibility}
+                  style={{ display: "flex", flexDirection: "column", alignItems: "center", cursor: "pointer" }}
+                >
+                  <img
+                    className="transition-300ms"
+                    src="../../../images/logo/new car logos/icons8-down-button-50.png"
+                    alt="More Logos"
+                    style={{ width: "100%", height: "auto", maxWidth: "100px" }}
+                  />
+                  <strong></strong>
+                </div>
+                {showMoreLogos && (
+                  <div className="slide-down-content" style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
+                    {/* Additional logos */}
+             
+
+                    {/* Continue adding more logos here */}
+                    <div>
+                      <img src="../../../images/logo/new car logos/Tata Motor Logo.png" alt="Tata Motors" />
+                      <strong>Tata Motors</strong>
+                    </div>
+                    <div style={{ flexDirection: "column" }}>
+                      <img src="../../../images/logo/new car logos/suzuki logo.png" alt="Maruti Suzuki" />
+                      <strong>Maruti Suzuki</strong>
+                    </div>
+                    <div>
+                      <img src="../../../images/logo/new car logos/Mahindra Logo.png" alt="Mahindra" />
+                      <strong>Mahindra</strong>
+                    </div>
+                    <div>
+                      <img src="../../../images/logo/new car logos/Honda Logo.png" alt="Honda" />
+                      <strong>Honda</strong>
+                    </div>
+                    <div>
+                      <img src="../../../images/logo/toyota.png" alt="Toyota" />
+                      <strong>Toyota</strong>
+                    </div>
+                  </div>
+                )}
+              </li>
+
+
+
+              
+
+      
+     
+
+              
+         
+                
+              
+               
+           
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+             
+
+
+
+              
+
+
+
+
+
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
             </ul>
           </div>
         </div>
